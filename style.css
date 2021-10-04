@@ -1,0 +1,26 @@
+:root {
+    --checker-width: 2rem;
+}
+
+ul {
+    display: grid;
+    list-style: none;
+    grid-template-rows: repeat(8, var(--checker-width));
+}
+
+ul > ul {
+    display: grid;
+    grid-template-columns: repeat(8, var(--checker-width));
+    grid-template-rows: none;
+}
+
+ul > ul:nth-child(even) > li:nth-child(odd) {
+    background: black;
+    min-height: 1rem;
+}
+
+ul > ul:nth-child(odd) > li:nth-child(even) {
+    background: black;
+    min-height: 1rem;
+}
+
